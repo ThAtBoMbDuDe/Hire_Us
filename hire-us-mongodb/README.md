@@ -1,0 +1,1 @@
+This is the folder we should work in to create our MongoDB. Don't know how it will all mesh yet, but I think we can make it work.
