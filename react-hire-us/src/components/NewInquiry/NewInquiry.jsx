@@ -2,7 +2,7 @@ const NewInquiry = () => {
 
   const newCompanyInfo = {};
 
-  const postStudent = () => {
+  const postCompany = () => {
     fetch("http://34.121.174.111:3002/api/students", {
       headers: {
         'Accept': 'application/json',
@@ -21,16 +21,16 @@ const NewInquiry = () => {
 
   const handleClick = (e) => {
     getCompanyData(e)
-    postStudent()
+    postCompany()
   }
 
   return (
     <form>
-      <label htmlFor="name">Enter Name:</label>
+      <label htmlFor="name">Enter Company Name:</label>
       <input datatype="name" type="text" name="name" />
-      <label htmlFor="email">Enter Email:</label>
+      <label htmlFor="email">Enter Company Email:</label>
       <input type="email" name="email"/>
-      <button onClick={handleClick} type="button">Submit New Student</button>
+      <button onClick={handleClick} type="button">Submit Inquiry</button>
     </form>
 
   )

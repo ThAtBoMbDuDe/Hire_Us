@@ -28,7 +28,7 @@ const Inquiries = () => {
       
     })
     .catch((err) => {
-      alert("No Student with that ID found, please try again.")
+      alert("We just put this up! You think we have that many inquiries already?")
       console.log(err)
     })
   }
@@ -40,12 +40,12 @@ const Inquiries = () => {
   return (
     <div>
       <div>
-        <input placeholder="Input Student ID" type="number" onChange={(e) => inquisitionId = e.target.value}/>
-        <button onClick={getCompaniesByID}>Get Student</button>
+        <input placeholder="Inquisition ID" type="number" onChange={(e) => inquisitionId = e.target.value}/>
+        <button onClick={getCompaniesByID}>Get Inquiry</button>
       </div>
       
-      {singleCompany ? <InquiryCard studentObj = {singleCompany}/> : companyData ? companyData.map((studentObj) => {
-        return <InquiryCard studentObj = {studentObj}/> 
+      {singleCompany ? <InquiryCard companyObj = {singleCompany}/> : companyData ? companyData.map((companyObj) => {
+        return <InquiryCard companyObj = {companyObj}/> 
       }) : ""}
     </div>
   )
