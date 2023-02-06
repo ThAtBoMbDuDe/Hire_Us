@@ -1,7 +1,7 @@
 import express from "express";
 import router from "./routes/inquiries.js";
 import bodyParser from "body-parser";
-import { sequelize } from "./db/index.js";
+import { sequelize } from "../hire-us-mongodb/index.js";
 
 const app = express();
 const port = process.env.PORT || 3002;

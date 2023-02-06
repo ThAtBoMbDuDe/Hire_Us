@@ -2,16 +2,16 @@ import { Inquiry } from "../models/inquiryModel.js";
 
 export const getInquiries = (req, res) => {
  Inquiry.findAll()
- .then((students) => {
-  res.status(200).send(students)
+ .then((inquiries) => {
+  res.status(200).send(inquiries)
  })
 };
 
 export const getInquiryById = (req, res) => {
   const id = parseInt(req.params.id);
   Inquiry.findByPk(id)
-  .then((student) => {
-    res.status(200).send(student || `Inquiry with id: ${id} not found!`)
+  .then((inquiry) => {
+    res.status(200).send(inquiry || `Inquiry with id: ${id} not found!`)
   })
 };
 
