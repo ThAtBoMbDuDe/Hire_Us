@@ -27,12 +27,30 @@ const NewInquiry = () => {
   }
 
   return (
+<<<<<<< HEAD
     <form className="container">
       <label htmlFor="name">Enter Company Name:</label>
       <input className="input_box" datatype="name" type="text" name="name" />
       <label htmlFor="email">Enter Company Email:</label>
       <input className="input_box" type="email" name="email"/>
+=======
+    <form>
+      <label htmlFor="companyName">Enter company name:</label>
+      <input datatype="companyName" type="text" name="companyName" />
+      <label htmlFor="companyEmail">Enter company email:</label>
+      <input type="companyEmail" name="companyEmail"/>
+      <label htmlFor="fullName">Enter full name:</label>
+      <input type="fullName" name="fullName"/>
+      <label htmlFor="job">List your job title here:</label>
+      <input type="job" name="job"/>
+      <label htmlFor="phone">Enter best contact number here:</label>
+      <input type="phone" name="phone"/>
+      <label htmlFor="personalEmail">Enter personal email:</label>
+      <input type="personalEmail" name="personalEmail"/>
+
+>>>>>>> e445104c93931979a6e35b54423e5691113629b2
       <button onClick={handleClick} type="button">Submit Inquiry</button>
+
     </form>
 
   )

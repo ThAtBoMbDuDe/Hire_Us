@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize";
-import { sequelize } from "../db/index.js";
+import { sequelize } from "../../hire-us-mongodb/index.js";
 
 
 export const Inquiry = sequelize.define("inquiries", {
