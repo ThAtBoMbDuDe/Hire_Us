@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Inquiries from './containers/Inquiries/Inquiries.jsx';
 import NewInquiry from './components/NewInquiry/NewInquiry.jsx';
 

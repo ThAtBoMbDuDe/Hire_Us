@@ -1,3 +1,5 @@
+import "./NewInquiry.scss";
+
 const NewInquiry = () => {
 
   const newCompanyInfo = {};
@@ -25,11 +27,11 @@ const NewInquiry = () => {
   }
 
   return (
-    <form>
+    <form className="container">
       <label htmlFor="name">Enter Company Name:</label>
-      <input datatype="name" type="text" name="name" />
+      <input className="input_box" datatype="name" type="text" name="name" />
       <label htmlFor="email">Enter Company Email:</label>
-      <input type="email" name="email"/>
+      <input className="input_box" type="email" name="email"/>
       <button onClick={handleClick} type="button">Submit Inquiry</button>
     </form>
 
