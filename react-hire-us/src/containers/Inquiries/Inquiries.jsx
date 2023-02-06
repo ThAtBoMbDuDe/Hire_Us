@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import InquiryCard from "../../components/InquiryCard";
+import InquiryCard from "../../components/InquiryCard/InquiryCard.jsx";
 
 const Inquiries = () => {
 

@@ -1,6 +1,6 @@
 import './App.css';
-import Inquiries from './containers/Inquiries/';
-import NewInquiry from './components/NewInquiry/NewInquiry';
+import Inquiries from './containers/Inquiries/Inquiries.jsx';
+import NewInquiry from './components/NewInquiry/NewInquiry.jsx';
 
 
 function App() {
