@@ -8,7 +8,7 @@ const Inquiries = () => {
 
   let inquisitionId = 0;
 
-  const getStudents = () => { 
+  const getCompanies = () => { 
     fetch("http://34.121.174.111:3002/api/students")
     .then((res) => {
         return res.json();
@@ -18,7 +18,7 @@ const Inquiries = () => {
     })
   }
 
-  const getStudentById = () => {
+  const getCompaniesByID = () => {
     fetch(`http://34.121.174.111:3002/api/students/${inquisitionId}`)
     .then((res) => {
       return res.json();
@@ -33,7 +33,7 @@ const Inquiries = () => {
     })
   }
 
-  useEffect(getStudents, [])
+  useEffect(getCompanies, [])
 
 
 
@@ -41,7 +41,7 @@ const Inquiries = () => {
     <div>
       <div>
         <input placeholder="Input Student ID" type="number" onChange={(e) => inquisitionId = e.target.value}/>
-        <button onClick={getStudentById}>Get Student</button>
+        <button onClick={getCompaniesByID}>Get Student</button>
       </div>
       
       {singleCompany ? <InquiryCard studentObj = {singleCompany}/> : companyData ? companyData.map((studentObj) => {
