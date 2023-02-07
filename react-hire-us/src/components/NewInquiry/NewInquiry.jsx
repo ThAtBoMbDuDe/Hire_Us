@@ -24,6 +24,7 @@ const NewInquiry = () => {
   const handleClick = (e) => {
     getCompanyData(e)
     postCompany()
+    
   }
 
   return (
