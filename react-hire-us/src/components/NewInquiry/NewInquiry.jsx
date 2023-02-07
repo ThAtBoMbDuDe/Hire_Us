@@ -39,10 +39,10 @@ const NewInquiry = () => {
       <label className="input" htmlFor="fullName">Enter full name:
       <input className="input box" type="fullName" name="fullName"/>
       </label>
-      <label className="input" htmlFor="job">List your job title here:
+      <label className="input" htmlFor="job">Enter job title:
       <input className="input box" type="job" name="job"/>
       </label>
-      <label className="input" htmlFor="phone">Enter best contact number here:
+      <label className="input" htmlFor="phone">Enter best contact number:
       <input className="input box" type="phone" name="phone"/>
       </label>
       <label className="input" htmlFor="personalEmail">Enter personal email:
