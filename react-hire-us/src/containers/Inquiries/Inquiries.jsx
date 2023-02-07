@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import InquiryCard from "../../components/InquiryCard/InquiryCard.jsx";
+import "./inquires.scss";
 
 const Inquiries = () => {
 
@@ -39,8 +40,8 @@ const Inquiries = () => {
 
   return (
     <div>
-      <div>
-        <input placeholder="Inquisition ID" type="number" onChange={(e) => inquisitionId = e.target.value}/>
+      <div className="inquireID_card">
+        <input className="id_input_box" placeholder="Inquisition ID" type="number" onChange={(e) => inquisitionId = e.target.value}/>
         <button onClick={getCompaniesByID}>Get Inquiry</button>
       </div>
       

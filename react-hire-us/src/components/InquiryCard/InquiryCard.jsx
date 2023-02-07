@@ -1,4 +1,4 @@
-
+import "./InquiryCard.scss";
 
 const InquiryCard = (props) => {
 
