@@ -41,7 +41,7 @@ const Inquiries = () => {
   return (
     <div>
       <div className="inquireID_card">
-        <input className="id_input_box" placeholder="Inquisition ID" type="number" onChange={(e) => inquisitionId = e.target.value}/>
+        <input className="input box" placeholder="Inquisition ID" type="number" onChange={(e) => inquisitionId = e.target.value}/>
         <button onClick={getCompaniesByID}>Get Inquiry</button>
       </div>
       

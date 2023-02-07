@@ -2,9 +2,16 @@
 
 .container {
     margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    // flex-wrap: wrap;
 }
 
-.input_box {
+.input {
+    margin: 5px;
     background-color: $color-white;
-    
+}
+
+.box {
+    border-radius: 10px;
 }

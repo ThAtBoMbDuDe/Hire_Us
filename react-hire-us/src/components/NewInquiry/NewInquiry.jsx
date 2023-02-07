@@ -27,32 +27,31 @@ const NewInquiry = () => {
   }
 
   return (
-<<<<<<< HEAD
+    <div>
     <form className="container">
-      <label htmlFor="name">Enter Company Name:</label>
-      <input className="input_box" datatype="name" type="text" name="name" />
-      <label htmlFor="email">Enter Company Email:</label>
-      <input className="input_box" type="email" name="email"/>
-=======
-    <form>
-      <label htmlFor="companyName">Enter company name:</label>
-      <input datatype="companyName" type="text" name="companyName" />
-      <label htmlFor="companyEmail">Enter company email:</label>
-      <input type="companyEmail" name="companyEmail"/>
-      <label htmlFor="fullName">Enter full name:</label>
-      <input type="fullName" name="fullName"/>
-      <label htmlFor="job">List your job title here:</label>
-      <input type="job" name="job"/>
-      <label htmlFor="phone">Enter best contact number here:</label>
-      <input type="phone" name="phone"/>
-      <label htmlFor="personalEmail">Enter personal email:</label>
-      <input type="personalEmail" name="personalEmail"/>
+      <label className="input" htmlFor="companyName">Enter company name:
+      <input className="input box" datatype="companyName" type="text" name="companyName" />
+      </label>
+      <label className="input" htmlFor="companyEmail">Enter company email:
+      <input className="input box" type="companyEmail" name="companyEmail"/>
+      </label>
+      <label className="input" htmlFor="fullName">Enter full name:
+      <input className="input box" type="fullName" name="fullName"/>
+      </label>
+      <label className="input" htmlFor="job">List your job title here:
+      <input className="input box" type="job" name="job"/>
+      </label>
+      <label className="input" htmlFor="phone">Enter best contact number here:
+      <input className="input box" type="phone" name="phone"/>
+      </label>
+      <label className="input" htmlFor="personalEmail">Enter personal email:
+      <input className="input box" type="personalEmail" name="personalEmail"/>
+      </label>
 
->>>>>>> e445104c93931979a6e35b54423e5691113629b2
-      <button onClick={handleClick} type="button">Submit Inquiry</button>
 
     </form>
-
+      <button className="box" onClick={handleClick} type="button">Submit Inquiry</button>
+    </div>
   )
 }
 
