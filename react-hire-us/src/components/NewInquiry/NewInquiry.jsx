@@ -29,6 +29,8 @@ const NewInquiry = () => {
 
   return (
     <div>
+   
+      <h1>Get Hired Today</h1>
     <form className="container">
       <label className="input" htmlFor="companyName">Enter company name:
       <input className="input box" datatype="companyName" type="text" name="companyName" />
