@@ -8,15 +8,48 @@
     
     // flex-wrap: wrap;
 }
-
+.input:hover{
+    transform: scale(1.1)
+}
 .input {
-    margin: 5px;
-    background-color: rgba(225, 225, 225, .9);
+    padding: 5px;
+    margin: 7px;
+    background-color: rgba(225, 225, 225, .5);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  border-radius: 70px;
+  border-radius: 30px;
+
 }
 
 .box {
-    border-radius: 10px;
+    border-radius: 30px;
+    background-color: rgba(225, 225, 225, .9);
+    cursor: pointer;
+}
+
+.box:hover{
+    transform: scale(1.1);
+    background-color: rgba(225, 225, 225, .5);
+}
+
+h1:hover{
+    color: #777575;
+    text-shadow: 2px 2px 0px  #c12222,
+                 4px 4px 0px #d0cece,
+                 6px 6px 0px #3a8cd8,
+                 8px 8px 0px #a17f72,
+                 10px 10px 0px #000000;
+}
+h1 {
+    font-size: 90px;
+    font-weight: 600;
+    font-family: 'Niconne', cursive;
+    cursor: default;
+    color: #c9c9c9;
+    text-shadow: 2px 2px 0px  #ec4646,
+                 4px 4px 0px #ffffff,
+                 6px 6px 0px #6db8ff,
+                 8px 8px 0px #ffc3ad,
+                 10px 10px 0px #000000;
+
 }

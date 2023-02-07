@@ -8,5 +8,15 @@
 
 .input {
     
-    background-color: blue;
+    color: rgb(67, 67, 67);
+}
+
+button{
+    border-radius: 30px;
+    background-color: rgba(225, 225, 225, .9)
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: rgba(225, 225, 225, .5)
 }
