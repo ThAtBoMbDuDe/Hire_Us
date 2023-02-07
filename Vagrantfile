@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "./mongodb.sh"
   config.vm.provider "virtualbox" do |v|
     v.memory = 3072
-    v.cpus = 3
+    v.cpus = 4
     v.name = "MongoDB-5"
   end
   config.vm.provision "shell", path: "./node.sh"
