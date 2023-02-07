@@ -1,5 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/focal64"
+  config.vm.synced_folder "../HIRE_US/", "/home/vagrant/HIRE_US"
   config.vm.box_check_update = false
   config.vm.define "MongoDB5"
   config.vm.network "public_network"
