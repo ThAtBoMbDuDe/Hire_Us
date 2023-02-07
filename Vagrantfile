@@ -6,6 +6,19 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/focal64"
+  config.vm.synced_folder = "HIRE_US/", "/home/vagrant/HIRE_US/"????
+  config.vm.network "private_network", ip: "192.168.50.4"
+  config.hostsupdater.aliases = [??]
+  config.vm.provider "virtualbox" do |vb|
+    vb.cpus = 2
+    vb.memory = 3072
+    vb.name = "hire-us-vb"
+  end
+  config.vm.provision "shell", path: "./mongodb.sh"
+  config.vm.provision "shell", path: "./node.sh"
+  config.vm.provision "shell", path: "./react.sh"
+  
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
