@@ -5,4 +5,4 @@ echo "Node version 16 installed"
 cd HIRE_US/hire-us-api
 npm install --no-bin-links -y
 echo "NPM Install Succesful"
-node script.js
+node index.js
