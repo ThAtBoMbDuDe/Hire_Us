@@ -2,7 +2,14 @@ import "./NewInquiry.scss";
 
 const NewInquiry = () => {
 
-  const newCompanyInfo = {};
+  let newCompanyInfo = {
+    companyName: '',
+    fullName: '',
+    companyEmail: '',
+    jobTitle: '',
+    contactNum: '',
+    personalEmail: ''
+  };
 
   const postCompany = () => {
     fetch("http://192.168.56.10:3002/api/inquiries", {
@@ -36,24 +43,25 @@ const NewInquiry = () => {
    
       <h1>Get Hired Today</h1>
     <form className="container">
-      <label className="input" htmlFor="companyName">Enter company name:
-      <input className="input box" datatype="companyName" type="text" name="companyName" />
-      </label>
-      <label className="input" htmlFor="companyEmail">Enter company email:
-      <input className="input box" type="companyEmail" name="companyEmail"/>
-      </label>
-      <label className="input" htmlFor="fullName">Enter full name:
-      <input className="input box" type="fullName" name="fullName"/>
-      </label>
-      <label className="input" htmlFor="job">Enter job title:
-      <input className="input box" type="job" name="job"/>
-      </label>
-      <label className="input" htmlFor="phone">Enter best contact number:
-      <input className="input box" type="phone" name="phone"/>
-      </label>
-      <label className="input" htmlFor="personalEmail">Enter personal email:
-      <input className="input box" type="personalEmail" name="personalEmail"/>
-      </label>
+      <>
+      <label className="input" htmlFor="companyName">Enter company name:</label>
+      <input className="input box" type="text" name="companyName" />
+      
+      <label className="input" htmlFor="fullName">Enter full name:</label>
+      <input className="input box" type="text" name="fullName"/>
+
+      <label className="input" htmlFor="companyEmail">Enter company email:</label>
+      <input className="input box" type="text" name="companyEmail"/>
+      
+      <label className="input" htmlFor="jobTitle">Enter job title:</label>
+      <input className="input box" type="text" name="jobTitle"/>
+     
+      <label className="input" htmlFor="contactNum">Enter best contact number:</label>
+      <input className="input box" type="text" name="contactNum"/>
+      
+      <label className="input" htmlFor="personalEmail">Enter personal email:</label>
+      <input className="input box" type="text" name="personalEmail"/>
+      </>
 
 
     </form>
