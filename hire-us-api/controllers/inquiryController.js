@@ -22,7 +22,7 @@ export const addInquiry = (req, res) => {
   })
 };
 
-export const deleteStudent = (req, res) => {
+export const deleteInquiry = (req, res) => {
   const id = parseInt(req.params.id);
   Inquiry.destroy({where: {id: id}})
   .then(() => {
