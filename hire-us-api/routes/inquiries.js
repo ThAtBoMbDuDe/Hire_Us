@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import {
   addInquiry,
   deleteInquiry,
-  getInquiryById,
+  getInquiryBycompanyName,
   getInquiries,
 } from "../controllers/inquiryController.js";
 
@@ -11,7 +11,7 @@ const router = Router();
 
 router.get("/", (req, res) => getInquiries(req, res));
 
-router.get("/:id", (req, res) => getInquiryById(req, res));
+router.get("/:companyName", (req, res) => getInquiryBycompanyName(req, res));
 
 router.post("/", (req, res) => addInquiry(req, res));
 

@@ -7,10 +7,10 @@ const Inquiries = () => {
   const [ companyData, setCompanyData ] = useState("");
   const [ singleCompany, setSingleCompany ] = useState("")
 
-  let inquisitionId = 0;
+  let cName = null;
 
   const getCompanies = () => { 
-    fetch("http://34.121.174.111:3002/api/students")
+    fetch("http://192.168.56.10:3002/api/inquiries")
     .then((res) => {
         return res.json();
     })
@@ -19,8 +19,8 @@ const Inquiries = () => {
     })
   }
 
-  const getCompaniesByID = () => {
-    fetch(`http://34.121.174.111:3002/api/students/${inquisitionId}`)
+  const getCompany = () => {
+    fetch(`http://192.168.56.10:3002/api/inquiries/${cName}`)
     .then((res) => {
       return res.json();
     })
@@ -41,8 +41,8 @@ const Inquiries = () => {
   return (
     <div>
       <div className="inquireID_card">
-        <input className="input box" placeholder="Inquisition ID" onChange={(e) => inquisitionId = e.target.value}/>
-        <button onClick={getCompaniesByID}>Get Inquiry</button>
+        <input className="input box" placeholder="Company Name" onChange={(e) => cName = e.target.value}/>
+        <button onClick={getCompany}>Get Inquiry</button>
       </div>
       
       {singleCompany ? <InquiryCard companyObj = {singleCompany}/> : companyData ? companyData.map((companyObj) => {

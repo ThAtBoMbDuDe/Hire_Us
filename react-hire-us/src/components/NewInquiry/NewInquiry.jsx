@@ -5,7 +5,7 @@ const NewInquiry = () => {
   const newCompanyInfo = {};
 
   const postCompany = () => {
-    fetch("http://34.121.174.111:3002/api/students", {
+    fetch("http://192.168.56.10:3002/api/inquiries", {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -16,8 +16,12 @@ const NewInquiry = () => {
   }
  
   const getCompanyData = (e) => {
-    newCompanyInfo.name = e.currentTarget.parentNode[0].value
-    newCompanyInfo.email = e.currentTarget.parentNode[1].value
+    newCompanyInfo.companyName = e.currentTarget.parentNode[0].value
+    newCompanyInfo.fullName = e.currentTarget.parentNode[1].value
+    newCompanyInfo.companyEmail = e.currentTarget.parentNode[2].value
+    newCompanyInfo.jobTitle = e.currentTarget.parentNode[3].value
+    newCompanyInfo.contactNum = e.currentTarget.parentNode[4].value
+    newCompanyInfo.personalEmail = e.currentTarget.parentNode[5].value
     
   }
 

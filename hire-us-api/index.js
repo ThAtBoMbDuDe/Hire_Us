@@ -3,12 +3,15 @@ import router from "./routes/inquiries.js";
 import bodyParser from "body-parser";
 import { connectDB } from "./hire-us-mongodb/index.js";
 import mongoose from "mongoose";
-
+import cors from "cors";
 
 const app = express();
 const port = process.env.PORT || 3002;
 
+
 connectDB();
+
+app.use(cors('*'))
 
 
 

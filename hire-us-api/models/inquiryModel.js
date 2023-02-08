@@ -1,14 +1,14 @@
 import mongoose, { Schema } from "mongoose";
 import { connectDB } from "../hire-us-mongodb/index.js"
-
+// import { autoIncrement } from "mongoose-auto-increment";
  
-let id = 0
+let id = 0 
 
 const newInquiry = new Schema({
     // _id: {
     //     type: Number,
     //     required: true,
-        
+    //     autoIncrement: true
     // },
     companyName: {
         type: String,

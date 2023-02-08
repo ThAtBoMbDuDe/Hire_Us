@@ -7,11 +7,11 @@ export const getInquiries = (req, res) => {
  })
 };
 
-export const getInquiryById = (req, res) => {
-  const id = parseInt(req.params.id);
-  Inquiry.findById(id)
+export const getInquiryBycompanyName = (req, res) => {
+  const cName = req.params.companyName;
+  Inquiry.findOne({companyName: cName})
   .then((inquiry) => {
-    res.status(200).send(inquiry || `Inquiry with id: ${id} not found!`)
+    res.status(200).send(inquiry || `The company ${cName.toUpperCase([0])} has never inquired.`)
   })
 };
 
