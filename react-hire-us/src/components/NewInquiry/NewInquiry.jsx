@@ -1,14 +1,24 @@
 import "./NewInquiry.scss";
+import { useState } from "react";
+
 
 const NewInquiry = () => {
 
-  let newCompanyInfo = {
-    companyName: '',
-    fullName: '',
-    companyEmail: '',
-    jobTitle: '',
-    contactNum: '',
-    personalEmail: ''
+
+  const [companyName, setCName] = useState('');
+  const [fullName, setName] = useState('');
+  const [companyEmail, setCEmail] = useState('');
+  const [jobTitle, setJob] = useState('');
+  const [contactNum, setCNum] = useState('');
+  const [personalEmail, setEmail] = useState('');
+
+  const newCompanyInfo = {
+    companyName: `${companyName}`,
+    fullName: `${fullName}`,
+    companyEmail: `${companyEmail}`,
+    jobTitle: `${jobTitle}`,
+    contactNum: `${contactNum}`,
+    personalEmail: `${personalEmail}`,
   };
 
   const postCompany = () => {
@@ -21,21 +31,29 @@ const NewInquiry = () => {
       body: JSON.stringify(newCompanyInfo)
     })
   }
- 
-  const getCompanyData = (e) => {
-    newCompanyInfo.companyName = e.currentTarget.parentNode[0].value
-    newCompanyInfo.fullName = e.currentTarget.parentNode[1].value
-    newCompanyInfo.companyEmail = e.currentTarget.parentNode[2].value
-    newCompanyInfo.jobTitle = e.currentTarget.parentNode[3].value
-    newCompanyInfo.contactNum = e.currentTarget.parentNode[4].value
-    newCompanyInfo.personalEmail = e.currentTarget.parentNode[5].value
-    
-  }
+
+
+  const updateCName = (event) => {
+    setCName(event.target.value)
+  };  
+  const updateFullName= (event) => {
+    setName(event.target.value)
+  };  
+  const updateCEmail = (event) => {
+    setCEmail(event.target.value)
+  };  
+  const updateJob = (event) => {
+    setJob(event.target.value)
+  };  
+  const updateCNum = (event) => {
+    setCNum(event.target.value)
+  };  
+  const updateEmail = (event) => {
+    setEmail(event.target.value)
+  };  
 
   const handleClick = (e) => {
-    getCompanyData(e)
-    postCompany()
-    
+    postCompany()    
   }
 
   return (
@@ -43,27 +61,23 @@ const NewInquiry = () => {
    
       <h1>Get Hired Today</h1>
     <form className="container">
-      <>
       <label className="input" htmlFor="companyName">Enter company name:</label>
-      <input className="input box" type="text" name="companyName" />
+      <input className="input box" onChange={updateCName} type="text" name="companyName" />
       
       <label className="input" htmlFor="fullName">Enter full name:</label>
-      <input className="input box" type="text" name="fullName"/>
+      <input className="input box" onChange={updateFullName} type="text" name="fullName"/>
 
       <label className="input" htmlFor="companyEmail">Enter company email:</label>
-      <input className="input box" type="text" name="companyEmail"/>
+      <input className="input box" onChange={updateCEmail} type="text" name="companyEmail"/>
       
       <label className="input" htmlFor="jobTitle">Enter job title:</label>
-      <input className="input box" type="text" name="jobTitle"/>
+      <input className="input box" onChange={updateJob} type="text" name="jobTitle"/>
      
       <label className="input" htmlFor="contactNum">Enter best contact number:</label>
-      <input className="input box" type="text" name="contactNum"/>
+      <input className="input box" onChange={updateCNum} type="text" name="contactNum"/>
       
       <label className="input" htmlFor="personalEmail">Enter personal email:</label>
-      <input className="input box" type="text" name="personalEmail"/>
-      </>
-
-
+      <input className="input box" onChange={updateEmail} type="text" name="personalEmail"/>
     </form>
       <button className="box" onClick={handleClick} type="button">Submit Inquiry</button>
     </div>
