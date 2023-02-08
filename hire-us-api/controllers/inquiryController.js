@@ -20,7 +20,13 @@ export const getInquiryById = (req, res) => {
 
 
 export const addInquiry = (req, res) => {
-  const newInquiry = new Inquiry({companyName: req.body.companyName, fullName:req.body.fullName, companyEmail: req.body.companyEmail, jobTitle: req.body.jobTitle, contactNum: req.body.contactNum, personalEmail: req.body.personalEmail})
+  const newInquiry = new Inquiry({
+    companyName: req.body.companyName, 
+    fullName:req.body.fullName, 
+    companyEmail: req.body.companyEmail, 
+    jobTitle: req.body.jobTitle, 
+    contactNum: req.body.contactNum, 
+    personalEmail: req.body.personalEmail})
   newInquiry.save((err,inquiry) => {
     if(err) {
       res.send({ message: err});
