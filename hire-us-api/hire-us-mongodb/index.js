@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 export const connectDB = async () => {
   try{
-    await mongoose.connect('mongodb://127.0.0.1/rocketpop', {
+    await mongoose.connect('mongodb://mongo:27017/rocketpop', {
       useUnifiedTopology: true,
       useNewUrlParser: true
     });
