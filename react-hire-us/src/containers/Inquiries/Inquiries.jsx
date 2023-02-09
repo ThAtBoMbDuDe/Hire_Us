@@ -10,7 +10,7 @@ const Inquiries = () => {
   let cName = null;
 
   const getCompanies = () => { 
-    fetch("http://192.168.56.10:3002/api/inquiries")
+    fetch("http://localhost:3002/api/inquiries")
     .then((res) => {
         return res.json();
     })
@@ -20,7 +20,7 @@ const Inquiries = () => {
   }
 
   const getCompany = () => {
-    fetch(`http://192.168.56.10:3002/api/inquiries/${cName}`)
+    fetch(`http://localhost:3002/api/inquiries/${cName}`)
     .then((res) => {
       return res.json();
     })
