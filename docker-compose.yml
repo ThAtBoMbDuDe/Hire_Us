@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  frontend_app:
+    container_name: "mongofront"
+    depends_on:
+      - app
+      - Mongo
+    image: "jaketracewell/frontend_app"
+    restart: "always"
+    build: "."
+    #port syntax= local port:app port
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+  app:
+    container_name: "mongoapp"
+    depends_on:
+      - Mongo
+    image: "jaketracewell/app"
+    restart: "always"
+    build: "."
+    #port syntax= local port:app port
+    ports:
+      - "3002:3002"
+    expose:
+      - 3002
+  Mongo:
+    container_name: "mongodb"
+    image: "mongo"
+# command:
+    environment:
+      PUID: "1000"
+    volumes:
+      - ./data:/data/students
+    ports:
+      - "27017:27017"
+    expose:
+      - 27017

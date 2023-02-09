@@ -1,1 +1,1 @@
-{"dependencies":[["vagrant-hostsupdater",["= 1.2.4"]]],"checksum":"b1ca1cbf86ef28668ac7520c6b71844d50ba2defb25e2176cf88d5eaf6a42b1a","vagrant_version":"2.3.4"}
+{"dependencies":[["vagrant-host-shell",["= 0.0.4"]],["vagrant-hostsupdater",["= 1.2.4"]]],"checksum":"28e099e7ac9d9aa8cef75fcbe56d154ab3a82d12cbcce3f492fd758ab87d7b2f","vagrant_version":"2.3.4"}
