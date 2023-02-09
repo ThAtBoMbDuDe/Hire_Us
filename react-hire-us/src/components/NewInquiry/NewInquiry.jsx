@@ -22,7 +22,7 @@ const NewInquiry = () => {
   };
 
   const postCompany = () => {
-    fetch("http://192.168.56.10:3002/api/inquiries", {
+    fetch("http://localhost:3002/api/inquiries", {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
