@@ -2,7 +2,7 @@ version: '3.8'
 services:
   frontend_app:
     container_name: "hireusfront"
-    image: "jaketracewell/hireusfrontend_app"
+    image: "breesebaker/hireusfrontend_app"
     restart: "always"
     build: "."
     #port syntax= local port:app port

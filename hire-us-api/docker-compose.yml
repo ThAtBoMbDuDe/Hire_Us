@@ -4,7 +4,7 @@ services:
     container_name: "hireusapp"
     depends_on:
       - Mongo
-    image: "jaketracewell/hireusapp"
+    image: "breesebaker/hireusapp"
     restart: "always"
     build: "."
     #port syntax= local port:app port
