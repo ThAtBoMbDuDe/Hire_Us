@@ -5,7 +5,7 @@ services:
     depends_on:
       - app
       - Mongo
-    image: "jaketracewell/frontend_app"
+    image: "breesebaker/frontend_app"
     restart: "always"
     build: "."
     #port syntax= local port:app port
@@ -17,7 +17,7 @@ services:
     container_name: "mongoapp"
     depends_on:
       - Mongo
-    image: "jaketracewell/app"
+    image: "breesebaker/app"
     restart: "always"
     build: "."
     #port syntax= local port:app port
@@ -32,7 +32,7 @@ services:
     environment:
       PUID: "1000"
     volumes:
-      - ./data:/data/students
+      - ./data:/data/inquires
     ports:
       - "27017:27017"
     expose:
